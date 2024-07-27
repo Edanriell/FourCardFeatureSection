@@ -1,7 +1,9 @@
-import { Links, Meta, Outlet, Scripts, ScrollRestoration } from "@remix-run/react";
-import "./tailwind.css";
+import "./styles/styles.less";
 
-export function Layout({ children }: { children: React.ReactNode }) {
+import { ReactNode } from "react";
+import { Links, Meta, Outlet, Scripts, ScrollRestoration } from "@remix-run/react";
+
+export function Layout({ children }: { children: ReactNode }) {
 	return (
 		<html lang="en">
 			<head>

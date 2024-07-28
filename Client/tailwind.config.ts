@@ -27,7 +27,11 @@ export default {
 		fontFamily: {
 			poppins: ["Poppins"]
 		},
-		extend: {}
+		extend: {
+			boxShadow: {
+				featureCard: "0 1.5rem 3rem -1.1rem rgba(131, 166, 210, 0.5)"
+			}
+		}
 	},
 	plugins: []
 } satisfies Config;

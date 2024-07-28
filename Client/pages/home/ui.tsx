@@ -37,7 +37,7 @@ export const HomePage: FC = () => {
 
 const Icon: FC = () => (
 	<svg
-		className="w-[5.7rem] h-[5.7rem] absolute bottom-[2.8rem] right-[2.8rem]"
+		className="w-[5.7rem] h-[5.7rem] absolute bottom-[2.8rem] right-[2.8rem] desktop:w-[6.4rem] desktop:h-[6.4rem] desktop:bottom-[3.2rem] desktop:right-[3.2rem]"
 		width="64"
 		height="64"
 		viewBox="0 0 64 64"

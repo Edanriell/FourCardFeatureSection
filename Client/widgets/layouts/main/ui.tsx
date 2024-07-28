@@ -6,8 +6,7 @@ type MainLayoutProps = {
 
 export const MainLayout: FC<MainLayoutProps> = ({ children }) => {
 	return (
-		<main>
-			<h1>Test</h1>
+		<main className={"w-full min-h-[100vh] flex flex-col items-center bg-[var(--dr-white)]"}>
 			{children}
 		</main>
 	);

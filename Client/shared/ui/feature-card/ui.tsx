@@ -1,10 +1,10 @@
-import { FC } from "react";
+import { FC, ReactNode } from "react";
 
 type FeatureCardProps = {
 	title: string;
 	description: string;
 	cardColor: string;
-	Icon: FC<any>;
+	Icon: ReactNode;
 };
 
 export const FeatureCard: FC<FeatureCardProps> = ({ title, description, cardColor, Icon }) => {
@@ -22,7 +22,7 @@ export const FeatureCard: FC<FeatureCardProps> = ({ title, description, cardColo
 			<p className="font-poppins font-normal text-[1.3rem] leading-[177%] tracking-[0.01em] text-[var(--voyager)] opacity-50 text-left">
 				{description}
 			</p>
-			<Icon />
+			{Icon}
 		</article>
 	);
 };

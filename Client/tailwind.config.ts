@@ -30,6 +30,12 @@ export default {
 		extend: {
 			boxShadow: {
 				featureCard: "0 1.5rem 3rem -1.1rem rgba(131, 166, 210, 0.5)"
+			},
+			gridTemplateRows: {
+				"4-custom": "11rem 11rem 11rem 11rem"
+			},
+			gridTemplateColumns: {
+				"3-custom": "repeat(3, 35rem)"
 			}
 		}
 	},

@@ -33,6 +33,18 @@ const featureCardsData = [
 ];
 
 export const HomePage: FC = () => {
+	const applyGridLayout = (index: number) => {
+		if (index === 0) {
+			return "row-start-2 row-end-3 col-start-1 col-end-2";
+		} else if (index === 1) {
+			return "row-start-1 row-end-2 col-start-2 col-end-3";
+		} else if (index === 2) {
+			return "row-start-3 row-end-4 col-start-2 col-end-3";
+		} else if (index === 3) {
+			return "row-start-2 row-end-3 col-start-3 col-end-4";
+		}
+	};
+
 	return (
 		<MainLayout>
 			<section className="mt-[8.5rem] mb-[7.8rem] mx-[3.2rem] desktop:mx-[16.5rem] desktop:mt-[8rem] desktop:mb-[8rem]">
@@ -48,9 +60,9 @@ export const HomePage: FC = () => {
 						that your project is successful
 					</p>
 				</div>
-				<ul className="grid grid-cols-1 grid-rows-4 gap-y-[2.5rem]">
+				<ul className="grid grid-cols-1 grid-rows-4 gap-y-[2.5rem] desktop:gap-[3rem] desktop:grid-cols-3-custom desktop:grid-rows-4-custom">
 					{featureCardsData.map(({ title, description, cardColor, Icon }, index) => (
-						<li key={index + "-" + title}>
+						<li key={index + "-" + title} className={applyGridLayout(index)}>
 							<FeatureCard
 								title={title}
 								description={description}

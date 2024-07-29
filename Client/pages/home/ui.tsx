@@ -4,6 +4,7 @@ import { MainLayout } from "@widgets/layouts/main";
 
 import { FeatureCard } from "@shared/ui/feature-card";
 import { Icon, IconType } from "@shared/ui/icon";
+import { useWindowSize } from "@shared/lib/hooks";
 
 const featureCardsData = [
 	{
@@ -33,7 +34,11 @@ const featureCardsData = [
 ];
 
 export const HomePage: FC = () => {
+	const windowSize = useWindowSize();
+
 	const applyGridLayout = (index: number) => {
+		if (windowSize.width && windowSize.width < 1440) return;
+
 		if (index === 0) {
 			return "row-start-2 row-end-3 col-start-1 col-end-2";
 		} else if (index === 1) {
@@ -47,7 +52,7 @@ export const HomePage: FC = () => {
 
 	return (
 		<MainLayout>
-			<section className="mt-[8.5rem] mb-[7.8rem] mx-[3.2rem] desktop:mx-[16.5rem] desktop:mt-[8rem] desktop:mb-[8rem]">
+			<section className="mt-[8.5rem] mb-[7.8rem] mx-[3.2rem] desktop:mx-[16.5rem] desktop:mt-[8rem] desktop:mb-[8rem] flex flex-col items-center">
 				<div className="mb-[7.6rem] max-w-[48rem] desktop:max-w-[54rem] desktop:mb-[6.4rem]">
 					<h1 className="font-poppins font-extralight text-[2.4rem] tracking-[0.01em] text-[var(--voyager)] text-center leading-[140%] mb-[1.6rem] desktop:text-[3.6rem]">
 						Reliable, efficient delivery

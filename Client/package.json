@@ -1,7 +1,9 @@
 {
 	"name": "client",
+	"version": "1.0.0",
+	"author": "Edanriell",
 	"private": true,
-	"sideEffects": false,
+	"license": "MIT",
 	"type": "module",
 	"scripts": {
 		"start:build": "remix vite:build",
